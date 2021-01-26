@@ -57,6 +57,16 @@ abstract class BaseEntity
 
         return json_decode($this->client->getProvider()->getResponse($request)->getBody()->getContents());
     }
+    protected function baseDelete(): object
+    {
+        $request = $this->client->getProvider()->getAuthenticatedRequest(
+            'DELETE',
+            $this->buildUri(),
+            $this->client->getToken()
+        );
+
+        return json_decode($this->client->getProvider()->getResponse($request)->getBody()->getContents());
+    }
     protected function basePost($post_body): object
     {
         $options['body'] = json_encode($post_body);
