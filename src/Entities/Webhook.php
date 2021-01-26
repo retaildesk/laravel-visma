@@ -6,10 +6,10 @@ namespace Webparking\LaravelVisma\Entities;
 
 use Illuminate\Support\Collection;
 
-class Webhooks extends BaseEntity
+class Webhook extends BaseEntity
 {
     /** @var string */
-    protected $endpoint = '/customers';
+    protected $endpoint = '/webhooks';
 
     public function index(): collection
     {
