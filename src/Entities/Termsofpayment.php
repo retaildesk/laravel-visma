@@ -9,7 +9,7 @@ use Illuminate\Support\Collection;
 class Termsofpayment extends BaseEntity
 {
     /** @var string */
-    protected $endpoint = '/termsofpayment';
+    protected $endpoint = '/termsofpayments';
 
     public function index(): collection
     {
