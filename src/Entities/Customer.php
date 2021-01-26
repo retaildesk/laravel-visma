@@ -15,4 +15,13 @@ class Customer extends BaseEntity
     {
         return $this->baseIndex();
     }
+    public function post($data = []): collection
+    {
+        return $this->basePost($data);
+    }
+    public function put(string $customerId,$data = []): collection
+    {
+        $this->endpoint .= '/' . $customerId;
+        return $this->basePut($data);
+    }
 }
