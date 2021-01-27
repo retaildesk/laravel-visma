@@ -17,4 +17,8 @@ class Voucher extends BaseEntity
 
         return $this->baseIndex();
     }
+    public function post($data = [])
+    {
+        return $this->basePost($data);
+    }
 }
